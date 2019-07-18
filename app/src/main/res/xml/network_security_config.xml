@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">169.254.166.232</domain>
+        <!-- DESKTOP-ESUDJTD/169.254.166.232 -->
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="TodoWriteBinding" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:context=".todos.write.TodoCreateEditActivity">
+
+        <TextView
+                android:id="@+id/txtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+                android:id="@+id/eTxtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:inputType="text"
+                app:layout_constraintBottom_toBottomOf="@id/txtId" />
+
+
+        <EditText
+                android:id="@+id/eTxtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+        <CheckBox
+                android:id="@+id/eCheckboxCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completed"
+                app:layout_constraintBottom_toBottomOf="@id/eTxtDescription" />
+
+        <Button
+                android:id="@+id/btnSaveTodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:onClick="saveTodo"
+                android:paddingHorizontal="20dp"
+                android:text="Save" />
+
+    </LinearLayout>
+</layout>
